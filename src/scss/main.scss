@@ -1,0 +1,30 @@
+@import './abstracts/_abstracts-dir';
+@import './navigation/_navigation-dir';
+@import './profile/_profile-dir';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    background-color: #FAFAFA;
+
+    #root {
+        width: 100vw;
+        height: 100vh;
+
+
+        main {
+            width: 100%;
+            max-width: 970px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            @include center;
+            flex-direction: column;
+        }
+    }
+}

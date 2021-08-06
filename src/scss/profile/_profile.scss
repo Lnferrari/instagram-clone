@@ -1,0 +1,137 @@
+.User {
+    width: 100%;
+    max-width: 970px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 0.3fr 0.7fr;
+    grid-template-rows: 0.7fr 0.3fr;
+    grid-template-areas: 
+    'avatar info'
+    'stories stories';
+    gap: 10px;
+
+    .avatar {
+        grid-area: avatar;
+        padding: 10px 15px;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+    }
+
+    .user-info {
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .user-buttons,
+        .account-info {
+            @include center;
+        }
+
+        .user-buttons,
+        .user-data,
+        .user-bio {
+            margin: 10px 0;
+            
+        }
+
+        .user-buttons {
+
+            div {
+                @include center;
+
+                h2 {
+                    margin-right: 5px;
+                }
+            }
+
+            .buttons {
+                margin-left: 20px;
+
+                * {
+                    cursor: pointer;
+                }
+
+                button {
+                    height: 27px;
+                    padding: 5px 10px;
+                    margin-left: 8px;
+                    background-color: #0095f6;
+                    color: white;
+                    font-weight: bold;
+                    @include center;
+                    outline: none;
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                    border-radius: 3px;
+                }
+
+                .follow {
+                    padding: 10px 20px;
+                }
+            }
+        }
+
+        .user-data {
+            
+            span {
+                margin-right: 20px;
+
+                .bold {
+                    margin: 0;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .user-bio {
+            
+            p {
+                line-height: 130%;
+            }
+
+            a {
+                text-decoration: none;
+                font-weight: bold;
+                color: #00376b;
+
+                &:visited {
+                    color:  #00376b;
+                }
+            }
+        }
+
+    }
+
+    .stories {
+        grid-area: stories;
+        margin: 10px 0;
+        display: flex;
+        font-size: 15px;
+        font-weight: bold;
+
+        div {
+            @include center;
+            flex-direction: column;
+            margin-right: 25px;
+            padding: 10px;
+
+            img {
+                width: 75px;
+                height: 75px;
+                object-fit: cover;
+                margin-bottom: 10px;
+                padding: 3px;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 50%;
+            }
+        }
+    }
+}

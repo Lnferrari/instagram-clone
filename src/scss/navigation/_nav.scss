@@ -1,0 +1,58 @@
+.Header {
+    width: 100%;
+    padding: 8px;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    @include center;
+
+    nav {
+        width: 100%;
+        max-width: 970px;
+        padding: 0 1.5rem;
+        @include center;
+
+        .logo {
+            min-width: 40px;
+            @include center;
+            justify-content: flex-start;
+            cursor: pointer;
+            flex: 1 9999 0%;
+
+            img {
+                margin-top: 5px;
+            }
+        }
+
+        .search {
+            @include center;
+
+            input {
+                padding: 5px;
+                outline: none;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 3px;
+            }
+
+            input::placeholder {
+                text-align: center;
+            }
+        }
+
+        .icons {
+            @include center;
+            justify-content: flex-end;
+            flex: 1 0 0%;
+            
+            * {
+                width: 24px;
+                height: 24px;
+                margin-left: 1.5rem;
+                cursor: pointer;
+            }
+
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+}
